@@ -16,7 +16,7 @@
     </nav>
 
     <div class="container">
-        <!-- 表頭：個人資訊 -->
+        <!-- 表頭：個人資訊 (維持不變) -->
         <header class="profile-header">
             <div class="profile-img">
                 <img src="profile.jpg" alt="Lori Li">
@@ -44,13 +44,12 @@
             </div>
         </header>
 
-        <!-- 履歷區塊 -->
+        <!-- 履歷區塊 (維持不變) -->
         <section id="resume">
             <div class="section-title">
                 <h3 class="lang-zh">工作經歷</h3>
                 <h3 class="lang-en hidden">Work Experience</h3>
             </div>
-            
             <div class="resume-grid">
                 <!-- 經歷 1: 伊日生活 -->
                 <div class="resume-item full-width">
@@ -125,9 +124,9 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- 技能與工具 -->
-            <div class="skills-section">
+            
+             <!-- 技能與工具 -->
+             <div class="skills-section">
                 <h3 class="lang-zh">專業技能 & 證照</h3>
                 <h3 class="lang-en hidden">Skills & Certifications</h3>
                 <div class="skills-tags">
@@ -255,49 +254,40 @@
         </section>
     </div>
 
-    <!-- Modals (彈跳視窗：完全依照 PDF 作品集內容) -->
+    <!-- Modals (彈跳視窗內容) -->
     
     <!-- Modal 1: 大風吹 -->
     <div id="modal-1" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('modal-1')">&times;</span>
-            <h3 class="lang-zh">大風吹寵物沙龍吹水機</h3>
+            <h3 class="lang-zh">大風吹｜寵物沙龍吹水機</h3>
             <h3 class="lang-en hidden">"Big Wind Blows" Pet Dryer</h3>
             
             <div class="modal-body">
                 <div class="detail-section">
-                    <p class="lang-zh">
-                        <strong>Product：</strong>大風吹寵物沙龍吹水機<br>
-                        <strong>Theme/Communication Idea：</strong>第一支呵護狗狗、對奴才友善的寵物吹水機<br>
-                        <strong>USP：</strong>大風量ｘ低噪音ｘ奴才友善重量<br>
-                        <strong>TA：</strong>注重狗狗皮膚健康、會自己幫狗狗洗澡的飼主<br>
-                        <strong>Tone&Manner：</strong>活潑、童趣、溫馨、新奇
-                    </p>
-                    <p class="lang-en hidden">
-                        <strong>Product:</strong> "Big Wind Blows" Pet Salon Dryer<br>
-                        <strong>Theme:</strong> The first pet dryer that cares for dogs and is friendly to owners.<br>
-                        <strong>USP:</strong> High Volume x Low Noise x User-Friendly Weight<br>
-                        <strong>TA:</strong> Owners who care about dog skin health and wash dogs themselves.<br>
-                        <strong>Tone & Manner:</strong> Lively, Playful, Warm, Novel
-                    </p>
+                    <h5 class="lang-zh">產品定位 (USP)</h5>
+                    <h5 class="lang-en hidden">Product USP</h5>
+                    <p class="lang-zh">大風量 x 低噪音 x 奴才友善重量。強調第一支呵護狗狗、同時對飼主友善的吹水機。</p>
+                    <p class="lang-en hidden">High volume x Low noise x User-friendly weight. Positioned as the first dryer caring for both dogs and owners.</p>
                 </div>
-                
                 <div class="detail-section">
-                    <h5 class="lang-zh">行銷重點</h5>
-                    <h5 class="lang-en hidden">Marketing Points</h5>
+                    <h5 class="lang-zh">目標受眾 (TA)</h5>
+                    <h5 class="lang-en hidden">Target Audience</h5>
+                    <p class="lang-zh">注重狗狗皮膚健康、習慣自己幫狗洗澡的飼主。</p>
+                    <p class="lang-en hidden">Owners who care about skin health and wash their dogs at home.</p>
+                </div>
+                <div class="detail-section">
+                    <h5 class="lang-zh">行銷策略與成效</h5>
+                    <h5 class="lang-en hidden">Strategy & Results</h5>
                     <ul class="lang-zh">
-                        <li>釋出時機：夏末秋初適合出遊的季節</li>
-                        <li>廣告及導購頁中以狗派人士的常用稱呼，拉近與TA距離</li>
-                        <li>跟一般吹風機做出區隔，教育消費者吹水機的不可取代性，並傳遞足夠的信任感</li>
-                        <li>放大毛孩的情境照比例，拉近與TA的親切感</li>
-                        <li>吹水機屬口碑型產品，加強KOL、KOC推廣</li>
+                        <li><strong>廣告策略：</strong>使用「狗派人士」常用稱呼拉近距離，並教育消費者吹水機的不可取代性。</li>
+                        <li><strong>視覺優化：</strong>放大毛孩情境照比例，強化親切感與信任度。</li>
+                        <li><strong>成效：</strong>募資達 $748,560，成功促成後續大宗採購機會。</li>
                     </ul>
                     <ul class="lang-en hidden">
-                        <li>Launch Timing: Late summer/early autumn, suitable for outings.</li>
-                        <li>Used common "dog lover" terminology in ads and landing pages to build rapport.</li>
-                        <li>Differentiated from standard hair dryers, educating on necessity and building trust.</li>
-                        <li>Emphasized pet scenario photos to enhance intimacy with TA.</li>
-                        <li>Strengthened KOL and KOC promotion for this word-of-mouth product.</li>
+                        <li><strong>Ad Strategy:</strong> Used "dog lover" terminology to build rapport and educated users on product necessity.</li>
+                        <li><strong>Visuals:</strong> Emphasized pet lifestyle photos to build trust.</li>
+                        <li><strong>Result:</strong> Raised $748,560 and secured bulk purchase opportunities.</li>
                     </ul>
                 </div>
             </div>
@@ -313,42 +303,23 @@
             
             <div class="modal-body">
                 <div class="detail-section">
-                    <p class="lang-zh">
-                        <strong>Product：</strong>悠懶律動機（原名：ACTIVE MAXBURN 塑身板）<br>
-                        <strong>Theme/Communication Idea：</strong>悠懶律動、慵懶運動<br>
-                        <strong>USP：</strong>13段律動強度ｘ藍芽喇叭ｘ寬大活動平面<br>
-                        <strong>TA：</strong>忙碌於工作、懶惰運動的上班族群<br>
-                        <strong>Tone&Manner：</strong>年輕、慵懶、優雅
-                    </p>
-                    <p class="lang-en hidden">
-                        <strong>Product:</strong> Lazy Motion Machine (Orig: ACTIVE MAXBURN)<br>
-                        <strong>Theme:</strong> Lazy Rhythm, Lazy Exercise<br>
-                        <strong>USP:</strong> 13 Intensity Levels x Bluetooth Speaker x Wide Platform<br>
-                        <strong>TA:</strong> Busy office workers who are lazy about exercise.<br>
-                        <strong>Tone & Manner:</strong> Young, Lazy, Elegant
-                    </p>
+                    <h5 class="lang-zh">溝通主軸</h5>
+                    <h5 class="lang-en hidden">Core Message</h5>
+                    <p class="lang-zh">「悠懶律動、慵懶運動」。將產品重新包裝為適合年輕、慵懶上班族的居家運動神器。</p>
+                    <p class="lang-en hidden">"Lazy Rhythm, Lazy Exercise". Rebranded as a home gym tool for busy, lazy office workers.</p>
                 </div>
-                
                 <div class="detail-section">
-                    <h5 class="lang-zh">行銷重點 & SEO佈局</h5>
-                    <h5 class="lang-en hidden">Marketing Points & SEO</h5>
+                    <h5 class="lang-zh">SEO 佈局策略</h5>
+                    <h5 class="lang-en hidden">SEO Strategy</h5>
                     <ul class="lang-zh">
-                        <li>釋出時機：輝葉、iNO等律動機百家爭鳴</li>
-                        <li>結合「律動機」熱潮，善用SEO紅利</li>
-                        <li>放大佛系運動的概念，透過簡單動作降低居家運動門檻</li>
-                        <li>產品頁圖片、文字置入律動機、悠懶律動機關鍵字</li>
-                        <li>搭配自家媒體，置入律動機推薦文章</li>
-                        <li>YouTube釋出親民影片，置入產品關鍵字</li>
-                        <li>蝦皮、露天、Pinkoi各通路上架，攻佔搜尋結果第一頁</li>
+                        <li><strong>關鍵字操作：</strong>結合當時市場「律動機」熱潮，善用 SEO 紅利。</li>
+                        <li><strong>內容行銷：</strong>撰寫開箱文、置入推薦文章，並於 YouTube 釋出親民影片攻佔搜尋版面。</li>
+                        <li><strong>成效：</strong>成功攻佔搜尋結果第一頁，並在蝦皮、Pinkoi 等通路同步上架。</li>
                     </ul>
                     <ul class="lang-en hidden">
-                        <li>Timing: High competition from brands like HUEI YEH and iNO.</li>
-                        <li>Leveraged the "Vibration Plate" trend for SEO gains.</li>
-                        <li>Highlighted "Buddhist-style (Lazy) exercise" to lower entry barriers.</li>
-                        <li>Embedded keywords in product images and text.</li>
-                        <li>Placed recommendation articles in owned media.</li>
-                        <li>Released relatable YouTube videos with product keywords.</li>
-                        <li>Launched on Shopee, Ruten, Pinkoi, dominating search result page 1.</li>
+                        <li><strong>Keywords:</strong> Leveraged the market trend for "vibration plates" for SEO gains.</li>
+                        <li><strong>Content:</strong> Created unboxing articles and YouTube videos to dominate search results.</li>
+                        <li><strong>Result:</strong> Ranked on the first page of search results and launched across Shopee/Pinkoi.</li>
                     </ul>
                 </div>
             </div>
@@ -364,50 +335,24 @@
             
             <div class="modal-body">
                 <div class="detail-section">
-                    <p class="lang-zh">
-                        <strong>Product：</strong>Pro-Air 空氣清淨機（原名：等離子智能抑菌空氣清淨機）<br>
-                        <strong>Theme/Communication Idea：</strong>一氣呵成大空間淨化<br>
-                        <strong>USP：</strong>CADR 700 x 六重潔淨程序 = 8 分鐘大空間淨化力<br>
-                        <strong>TA：</strong>有限預算下追求生活品質 / 2-3房房型 / 中小家庭<br>
-                        <strong>Tone&Manner：</strong>科技、沉穩、大器
-                    </p>
-                    <p class="lang-en hidden">
-                        <strong>Product:</strong> Pro-Air Purifier (Orig: Plasma Smart Antibacterial Purifier)<br>
-                        <strong>Theme:</strong> Complete Large Space Purification in One Go<br>
-                        <strong>USP:</strong> CADR 700 x 6-Stage Purification = 8 Mins for Large Spaces<br>
-                        <strong>TA:</strong> Budget-conscious quality seekers / 2-3 Room Apts / Small Families<br>
-                        <strong>Tone & Manner:</strong> Tech, Stable, Premium
-                    </p>
+                    <h5 class="lang-zh">核心概念</h5>
+                    <h5 class="lang-en hidden">Concept</h5>
+                    <p class="lang-zh">「一氣呵成大空間淨化」。強調 CADR 700 x 六重潔淨程序 = 8 分鐘大空間淨化力。</p>
+                    <p class="lang-en hidden">"Complete Large Space Purification". Highlighted CADR 700 & 6-stage cleaning = 8 mins to purify.</p>
                 </div>
-                
-                <div class="detail-section">
-                    <h5 class="lang-zh">行銷重點 & SEO佈局</h5>
-                    <h5 class="lang-en hidden">Marketing Points & SEO</h5>
-                    <ul class="lang-zh">
-                        <li>CADR值是消費者選購考量的要點之一，放大CADR值優勢</li>
-                        <li>以淺顯易懂的方式，輔助消費者對規格的了解</li>
-                        <li>透過專業拍攝，呈現產品質感</li>
-                        <li>產品頁圖片、文字置入型號、Toshiba空氣清淨機等關鍵字</li>
-                        <li>搭配自家媒體，置入空氣清淨機推薦文章</li>
-                        <li>撰寫開箱文，提升搜尋頁面權重</li>
-                        <li>YouTube上架形象影片，置入產品關鍵字</li>
-                    </ul>
-                    <ul class="lang-en hidden">
-                        <li>Highlighted CADR value as a key purchasing factor.</li>
-                        <li>Explained specs in an easy-to-understand way.</li>
-                        <li>Showcased product quality through professional photography.</li>
-                        <li>Embedded keywords like "Toshiba Air Purifier" in content.</li>
-                        <li>Placed recommendation articles in owned media.</li>
-                        <li>Wrote unboxing articles to boost search weight.</li>
-                        <li>Uploaded brand videos on YouTube with keywords.</li>
-                    </ul>
-                </div>
-
                 <div class="detail-section">
                     <h5 class="lang-zh">Landing Page 編排邏輯</h5>
                     <h5 class="lang-en hidden">Landing Page Logic</h5>
-                    <p class="lang-zh">形象影片/開箱影片 -> 口碑推薦 -> 痛點共鳴點 -> 產品登場 -> 產品功能介紹 -> 使用情境 -> 競品比較 -> 產品規格</p>
-                    <p class="lang-en hidden">Brand/Unboxing Video -> Testimonials -> Pain Points -> Product Intro -> Features -> Scenarios -> Comparison -> Specs</p>
+                    <ul class="lang-zh">
+                        <li><strong>痛點共鳴：</strong>針對中小家庭，在有限預算下追求生活品質的需求。</li>
+                        <li><strong>信任感建立：</strong>形象影片 -> 開箱影片 -> 口碑推薦 -> 產品規格比較。</li>
+                        <li><strong>視覺風格：</strong>科技、沉穩、大器，透過專業拍攝呈現產品質感。</li>
+                    </ul>
+                    <ul class="lang-en hidden">
+                        <li><strong>Pain Points:</strong> Targeted families seeking quality on a budget.</li>
+                        <li><strong>Trust Building:</strong> Brand Video -> Unboxing -> Testimonials -> Specs Comparison.</li>
+                        <li><strong>Style:</strong> Tech, stable, premium visuals to showcase product quality.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -431,12 +376,12 @@
                     <h5 class="lang-zh">執行內容</h5>
                     <h5 class="lang-en hidden">Execution</h5>
                     <ul class="lang-zh">
-                        <li><strong>角色：</strong>主要行銷專案 PM，負責整體行銷與專案規劃。</li>
-                        <li><strong>貢獻：</strong>自產品定位、問卷調研、導購頁設計到廣告投放，完整執行行銷計劃。</li>
+                        <li><strong>全案管理：</strong>擔任主要行銷專案 PM，負責整體行銷與專案規劃。</li>
+                        <li><strong>完整流程：</strong>自產品定位、問卷調研、導購頁設計到廣告投放，完整執行行銷計劃。</li>
                     </ul>
                     <ul class="lang-en hidden">
-                        <li><strong>Role:</strong> Lead Marketing PM responsible for overall strategy.</li>
-                        <li><strong>Contribution:</strong> Executed from positioning, surveys, and LP design to advertising.</li>
+                        <li><strong>Project Management:</strong> Lead Marketing PM responsible for overall strategy.</li>
+                        <li><strong>Full Process:</strong> Executed from positioning, surveys, and LP design to advertising.</li>
                     </ul>
                 </div>
             </div>
