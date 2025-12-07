@@ -1,8 +1,8 @@
-/* 設定變數 (配色方案：莫蘭迪藍灰與暖沙色) */
+/* 全域變數與基本設定 */
 :root {
-    --primary-color: #5d7a8c;   /* 類似作品集封面的藍灰色 */
-    --secondary-color: #d6cfc7; /* 暖沙色 */
-    --accent-color: #c0392b;    /* 強調色 (用於按鈕或重點) */
+    --primary-color: #5d7a8c;
+    --secondary-color: #d6cfc7;
+    --accent-color: #c0392b;
     --bg-color: #f4f6f7;
     --text-color: #333;
     --card-bg: #ffffff;
@@ -108,7 +108,7 @@ body {
     color: #444;
 }
 
-/* 區塊通用 */
+/* 標題樣式 */
 .section-title h3 {
     font-size: 1.8rem;
     color: var(--primary-color);
@@ -130,17 +130,13 @@ body {
 /* 履歷列表 */
 .resume-grid {
     display: grid;
-    grid-template-columns: 1fr; /* 手機版單欄 */
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
 @media (min-width: 768px) {
-    .resume-grid {
-        grid-template-columns: 1fr 1fr; /* 電腦版雙欄 */
-    }
-    .resume-item.full-width {
-        grid-column: 1 / -1; /* 滿版 */
-    }
+    .resume-grid { grid-template-columns: 1fr 1fr; }
+    .resume-item.full-width { grid-column: 1 / -1; }
 }
 
 .resume-item {
@@ -178,7 +174,7 @@ body {
     font-weight: 500;
 }
 
-/* 作品集卡片 */
+/* 作品集卡片 (更新) */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -193,9 +189,30 @@ body {
     transition: transform 0.3s;
     position: relative;
     border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio-card:hover { transform: translateY(-5px); }
+
+/* 新增圖片容器 */
+.portfolio-img-container {
+    width: 100%;
+    height: 180px;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.portfolio-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 確保圖片填滿且不變形 */
+    transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-img-container img {
+    transform: scale(1.05);
+}
 
 .card-tag {
     position: absolute;
@@ -206,12 +223,27 @@ body {
     padding: 4px 10px;
     font-size: 0.75rem;
     border-radius: 20px;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.card-content { padding: 25px; }
-.card-content h4 { margin: 0 0 10px 0; color: #333; font-size: 1.2rem; padding-right: 60px; }
+.card-content { 
+    padding: 25px; 
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h4 { margin: 0 0 10px 0; color: #333; font-size: 1.2rem; }
 .card-content .stats { color: var(--accent-color); font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; }
-.card-content .description { font-size: 0.9rem; color: #666; margin-bottom: 20px; line-height: 1.5; }
+.card-content .description { font-size: 0.9rem; color: #666; margin-bottom: 20px; line-height: 1.5; flex-grow: 1; }
+
+/* 按鈕樣式 (更新) */
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
 
 .btn {
     display: inline-block;
@@ -223,12 +255,94 @@ body {
     border-radius: 4px;
     font-size: 0.9rem;
     transition: all 0.3s;
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
 }
 
 .btn:hover { background: var(--primary-color); color: white; }
+
+/* 次要按鈕樣式 */
+.btn.secondary {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+    color: #555;
+}
+
+.btn.secondary:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* Modal (彈跳視窗) 樣式 - 新增 */
+.modal {
+    display: none; /* 預設隱藏 */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); /* 半透明黑色背景 */
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 距離頂部 5% */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.detail-section {
+    margin-bottom: 20px;
+}
+
+.detail-section h5 {
+    font-size: 1rem;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 8px;
+}
+
+.detail-section p, .detail-section li {
+    font-size: 0.95rem;
+    color: #555;
+}
 
 /* 手機版適應 */
 @media (max-width: 768px) {
     .profile-header { flex-direction: column; text-align: center; gap: 20px; }
     .contact-info { justify-content: center; }
+    .modal-content { margin: 15% auto; width: 95%; padding: 20px; }
 }
