@@ -1,9 +1,9 @@
+// 語言切換功能
 function toggleLanguage() {
     const zhElements = document.querySelectorAll('.lang-zh');
     const enElements = document.querySelectorAll('.lang-en');
     const btn = document.getElementById('lang-switch-btn');
 
-    // 檢查目前是否為中文模式（如果第一個中文元素沒有 hidden class）
     const isZh = !zhElements[0].classList.contains('hidden');
 
     if (isZh) {
@@ -16,5 +16,26 @@ function toggleLanguage() {
         zhElements.forEach(el => el.classList.remove('hidden'));
         enElements.forEach(el => el.classList.add('hidden'));
         btn.innerText = "Switch to English";
+    }
+}
+
+// Modal 開關功能
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+    // 禁止背景滾動
+    document.body.style.overflow = "hidden";
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+    // 恢復背景滾動
+    document.body.style.overflow = "auto";
+}
+
+// 點擊 Modal 外部區域也可關閉
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
     }
 }
