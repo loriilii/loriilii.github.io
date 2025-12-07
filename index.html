@@ -16,7 +16,7 @@
     </nav>
 
     <div class="container">
-        <!-- 表頭：個人資訊 -->
+        <!-- 表頭：個人資訊 (維持不變) -->
         <header class="profile-header">
             <div class="profile-img">
                 <img src="profile.jpg" alt="Lori Li">
@@ -26,7 +26,7 @@
                 <h1 class="lang-en hidden">Lori Li</h1>
                 
                 <h2 class="lang-zh">電子商務部主任 | 行銷專案經理</h2>
-                <h2 class="lang-en hidden">Director of E-commerce | Project Manager</h2>
+                <h2 class="lang-en hidden">Director of E-commerce | Marketing Project Manager</h2>
                 
                 <p class="company lang-zh">伊日生活・伊聖詩_台灣伊日股份有限公司</p>
                 <p class="company lang-en hidden">YIRI LIVING CO., LTD.</p>
@@ -44,13 +44,12 @@
             </div>
         </header>
 
-        <!-- 履歷區塊 -->
+        <!-- 履歷區塊 (維持不變) -->
         <section id="resume">
             <div class="section-title">
                 <h3 class="lang-zh">工作經歷</h3>
                 <h3 class="lang-en hidden">Work Experience</h3>
             </div>
-            
             <div class="resume-grid">
                 <!-- 經歷 1: 伊日生活 -->
                 <div class="resume-item full-width">
@@ -125,9 +124,9 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- 技能與工具 -->
-            <div class="skills-section">
+            
+             <!-- 技能與工具 -->
+             <div class="skills-section">
                 <h3 class="lang-zh">專業技能 & 證照</h3>
                 <h3 class="lang-en hidden">Skills & Certifications</h3>
                 <div class="skills-tags">
@@ -154,6 +153,9 @@
             <div class="portfolio-grid">
                 <!-- 作品 1: 大風吹寵物吹水機 -->
                 <div class="portfolio-card">
+                    <div class="portfolio-img-container">
+                        <img src="project-dryer.jpg" alt="Big Wind Blows">
+                    </div>
                     <div class="card-tag lang-zh">集資專案</div>
                     <div class="card-tag lang-en hidden">Crowdfunding</div>
                     <div class="card-content">
@@ -162,17 +164,23 @@
                         <p class="stats lang-zh"><i class="fas fa-chart-line"></i> 集資金額 $748,560</p>
                         <p class="stats lang-en hidden"><i class="fas fa-chart-line"></i> Raised $748,560</p>
                         <p class="description lang-zh">
-                            從前期問卷、產品定位(奴才友善)、到廣告投放與社群口碑操作。成功建構行銷流程，促成後續大宗採購機會。
+                            第一支呵護狗狗、對奴才友善的寵物吹水機。透過精準定位與社群操作，成功促成線下經銷機會。
                         </p>
                         <p class="description lang-en hidden">
-                            Managed the entire process from surveys and positioning (pet-owner friendly) to ads and social buzz. Successfully built a marketing funnel leading to bulk orders.
+                            The first pet dryer friendly to both dogs and owners. Successfully led to retail opportunities via precise positioning.
                         </p>
-                        <a href="https://www.myfeel-tw.com/tw/crowdfunding/62ff424fad6732f67b44e823/uah-ucsj01/" target="_blank" class="btn">View Project <i class="fas fa-external-link-alt"></i></a>
+                        <div class="btn-group">
+                            <button class="btn secondary" onclick="openModal('modal-1')"><i class="fas fa-info-circle"></i> <span class="lang-zh">了解更多</span><span class="lang-en hidden">Learn More</span></button>
+                            <a href="https://www.myfeel-tw.com/tw/crowdfunding/62ff424fad6732f67b44e823/uah-ucsj01/" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> View</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 作品 2: 悠懶律動機 -->
                 <div class="portfolio-card">
+                    <div class="portfolio-img-container">
+                        <img src="project-motion.jpg" alt="Lazy Motion">
+                    </div>
                     <div class="card-tag lang-zh">產品重塑 / SEO</div>
                     <div class="card-tag lang-en hidden">Rebranding / SEO</div>
                     <div class="card-content">
@@ -184,14 +192,20 @@
                             結合「佛系運動」概念，降低居家運動門檻。透過 SEO 佈局與產品頁優化，成功搶佔關鍵字流量。
                         </p>
                         <p class="description lang-en hidden">
-                            Leveraged the "Lazy Exercise" concept to lower entry barriers. Captured keyword traffic through strategic SEO and landing page optimization.
+                            Leveraged "Lazy Exercise" concept. Captured keyword traffic through strategic SEO and landing page optimization.
                         </p>
-                        <a href="https://www.myfeel-tw.com/tw/product/62569b02eb7ca436404dc1c8/em-active/" target="_blank" class="btn">View Project <i class="fas fa-external-link-alt"></i></a>
+                        <div class="btn-group">
+                            <button class="btn secondary" onclick="openModal('modal-2')"><i class="fas fa-info-circle"></i> <span class="lang-zh">了解更多</span><span class="lang-en hidden">Learn More</span></button>
+                            <a href="https://www.myfeel-tw.com/tw/product/62569b02eb7ca436404dc1c8/em-active/" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> View</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 作品 3: TOSHIBA Pro-Air -->
                 <div class="portfolio-card">
+                    <div class="portfolio-img-container">
+                        <img src="project-air.jpg" alt="Toshiba Air">
+                    </div>
                     <div class="card-tag lang-zh">導購頁企劃</div>
                     <div class="card-tag lang-en hidden">Landing Page Strategy</div>
                     <div class="card-content">
@@ -200,17 +214,23 @@
                         <p class="stats lang-zh"><i class="fas fa-bullseye"></i> 放大 CADR 產品優勢</p>
                         <p class="stats lang-en hidden"><i class="fas fa-bullseye"></i> Highlighted CADR USP</p>
                         <p class="description lang-zh">
-                            針對中小家庭與追求生活品質受眾，將複雜規格轉化為「8分鐘大空間淨化」的具體利益點，提升轉換說服力。
+                            將複雜規格轉化為「8分鐘大空間淨化」的具體利益點，針對中小家庭受眾提升轉換說服力。
                         </p>
                         <p class="description lang-en hidden">
-                            Translated complex specs into concrete benefits ("8-min purification") for families, significantly enhancing conversion persuasion.
+                            Translated complex specs into benefits ("8-min purification") for families, enhancing conversion persuasion.
                         </p>
-                        <a href="https://www.myfeel-tw.com/tw/product/6193693c2e6bad6469318b17/toshiba-pro-air/" target="_blank" class="btn">View Project <i class="fas fa-external-link-alt"></i></a>
+                        <div class="btn-group">
+                            <button class="btn secondary" onclick="openModal('modal-3')"><i class="fas fa-info-circle"></i> <span class="lang-zh">了解更多</span><span class="lang-en hidden">Learn More</span></button>
+                            <a href="https://www.myfeel-tw.com/tw/product/6193693c2e6bad6469318b17/toshiba-pro-air/" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> View</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 作品 4: 集資專案 Washwow -->
+                <!-- 作品 4: Washwow -->
                 <div class="portfolio-card">
+                    <div class="portfolio-img-container">
+                        <img src="project-cup.jpg" alt="Washwow">
+                    </div>
                     <div class="card-tag lang-zh">新品發布</div>
                     <div class="card-tag lang-en hidden">Product Launch</div>
                     <div class="card-content">
@@ -219,15 +239,153 @@
                         <p class="stats lang-zh"><i class="fas fa-bolt"></i> 24小時突破 $100,000</p>
                         <p class="stats lang-en hidden"><i class="fas fa-bolt"></i> $100k in 24 Hours</p>
                         <p class="description lang-zh">
-                            負責完整行銷計劃，從問卷調研到導購頁設計。快速聚焦目標受眾，創造開局聲量。
+                            從問卷調研到導購頁設計，快速聚焦目標受眾，創造開局聲量。
                         </p>
                         <p class="description lang-en hidden">
-                            Managed full marketing plan from research to LP design. Rapidly focused on target audience and created initial launch buzz.
+                            Managed full marketing plan from research to LP design. Rapidly created initial launch buzz.
                         </p>
+                        <div class="btn-group">
+                            <button class="btn secondary" onclick="openModal('modal-4')"><i class="fas fa-info-circle"></i> <span class="lang-zh">了解更多</span><span class="lang-en hidden">Learn More</span></button>
+                            <a href="https://www.myfeel-tw.com/projects/wow-2102" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> View</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+    </div>
+
+    <!-- Modals (彈跳視窗內容) -->
+    
+    <!-- Modal 1: 大風吹 -->
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-1')">&times;</span>
+            <h3 class="lang-zh">大風吹｜寵物沙龍吹水機</h3>
+            <h3 class="lang-en hidden">"Big Wind Blows" Pet Dryer</h3>
+            
+            <div class="modal-body">
+                <div class="detail-section">
+                    <h5 class="lang-zh">產品定位 (USP)</h5>
+                    <h5 class="lang-en hidden">Product USP</h5>
+                    <p class="lang-zh">大風量 x 低噪音 x 奴才友善重量。強調第一支呵護狗狗、同時對飼主友善的吹水機。</p>
+                    <p class="lang-en hidden">High volume x Low noise x User-friendly weight. Positioned as the first dryer caring for both dogs and owners.</p>
+                </div>
+                <div class="detail-section">
+                    <h5 class="lang-zh">目標受眾 (TA)</h5>
+                    <h5 class="lang-en hidden">Target Audience</h5>
+                    <p class="lang-zh">注重狗狗皮膚健康、習慣自己幫狗洗澡的飼主。</p>
+                    <p class="lang-en hidden">Owners who care about skin health and wash their dogs at home.</p>
+                </div>
+                <div class="detail-section">
+                    <h5 class="lang-zh">行銷策略與成效</h5>
+                    <h5 class="lang-en hidden">Strategy & Results</h5>
+                    <ul class="lang-zh">
+                        <li><strong>廣告策略：</strong>使用「狗派人士」常用稱呼拉近距離，並教育消費者吹水機的不可取代性。</li>
+                        <li><strong>視覺優化：</strong>放大毛孩情境照比例，強化親切感與信任度。</li>
+                        <li><strong>成效：</strong>募資達 $748,560，成功促成後續大宗採購機會。</li>
+                    </ul>
+                    <ul class="lang-en hidden">
+                        <li><strong>Ad Strategy:</strong> Used "dog lover" terminology to build rapport and educated users on product necessity.</li>
+                        <li><strong>Visuals:</strong> Emphasized pet lifestyle photos to build trust.</li>
+                        <li><strong>Result:</strong> Raised $748,560 and secured bulk purchase opportunities.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: 律動機 -->
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-2')">&times;</span>
+            <h3 class="lang-zh">悠懶律動機</h3>
+            <h3 class="lang-en hidden">Lazy Motion Machine</h3>
+            
+            <div class="modal-body">
+                <div class="detail-section">
+                    <h5 class="lang-zh">溝通主軸</h5>
+                    <h5 class="lang-en hidden">Core Message</h5>
+                    <p class="lang-zh">「悠懶律動、慵懶運動」。將產品重新包裝為適合年輕、慵懶上班族的居家運動神器。</p>
+                    <p class="lang-en hidden">"Lazy Rhythm, Lazy Exercise". Rebranded as a home gym tool for busy, lazy office workers.</p>
+                </div>
+                <div class="detail-section">
+                    <h5 class="lang-zh">SEO 佈局策略</h5>
+                    <h5 class="lang-en hidden">SEO Strategy</h5>
+                    <ul class="lang-zh">
+                        <li><strong>關鍵字操作：</strong>結合當時市場「律動機」熱潮，善用 SEO 紅利。</li>
+                        <li><strong>內容行銷：</strong>撰寫開箱文、置入推薦文章，並於 YouTube 釋出親民影片攻佔搜尋版面。</li>
+                        <li><strong>成效：</strong>成功攻佔搜尋結果第一頁，並在蝦皮、Pinkoi 等通路同步上架。</li>
+                    </ul>
+                    <ul class="lang-en hidden">
+                        <li><strong>Keywords:</strong> Leveraged the market trend for "vibration plates" for SEO gains.</li>
+                        <li><strong>Content:</strong> Created unboxing articles and YouTube videos to dominate search results.</li>
+                        <li><strong>Result:</strong> Ranked on the first page of search results and launched across Shopee/Pinkoi.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Toshiba -->
+    <div id="modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-3')">&times;</span>
+            <h3 class="lang-zh">TOSHIBA Pro-Air 空氣清淨機</h3>
+            <h3 class="lang-en hidden">TOSHIBA Pro-Air Purifier</h3>
+            
+            <div class="modal-body">
+                <div class="detail-section">
+                    <h5 class="lang-zh">核心概念</h5>
+                    <h5 class="lang-en hidden">Concept</h5>
+                    <p class="lang-zh">「一氣呵成大空間淨化」。強調 CADR 700 x 六重潔淨程序 = 8 分鐘大空間淨化力。</p>
+                    <p class="lang-en hidden">"Complete Large Space Purification". Highlighted CADR 700 & 6-stage cleaning = 8 mins to purify.</p>
+                </div>
+                <div class="detail-section">
+                    <h5 class="lang-zh">Landing Page 編排邏輯</h5>
+                    <h5 class="lang-en hidden">Landing Page Logic</h5>
+                    <ul class="lang-zh">
+                        <li><strong>痛點共鳴：</strong>針對中小家庭，在有限預算下追求生活品質的需求。</li>
+                        <li><strong>信任感建立：</strong>形象影片 -> 開箱影片 -> 口碑推薦 -> 產品規格比較。</li>
+                        <li><strong>視覺風格：</strong>科技、沉穩、大器，透過專業拍攝呈現產品質感。</li>
+                    </ul>
+                    <ul class="lang-en hidden">
+                        <li><strong>Pain Points:</strong> Targeted families seeking quality on a budget.</li>
+                        <li><strong>Trust Building:</strong> Brand Video -> Unboxing -> Testimonials -> Specs Comparison.</li>
+                        <li><strong>Style:</strong> Tech, stable, premium visuals to showcase product quality.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Washwow -->
+    <div id="modal-4" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-4')">&times;</span>
+            <h3 class="lang-zh">Washwow 無限漱口水杯</h3>
+            <h3 class="lang-en hidden">Washwow Mouthwash Cup</h3>
+            
+            <div class="modal-body">
+                <div class="detail-section">
+                    <h5 class="lang-zh">專案成效</h5>
+                    <h5 class="lang-en hidden">Project Results</h5>
+                    <p class="lang-zh">專案上線 24 小時即突破 $100,000。成功快速聚焦目標受眾並創造開局聲量。</p>
+                    <p class="lang-en hidden">Surpassed $100,000 within 24 hours. Successfully focused on the target audience and created buzz.</p>
+                </div>
+                <div class="detail-section">
+                    <h5 class="lang-zh">執行內容</h5>
+                    <h5 class="lang-en hidden">Execution</h5>
+                    <ul class="lang-zh">
+                        <li><strong>全案管理：</strong>擔任主要行銷專案 PM，負責整體行銷與專案規劃。</li>
+                        <li><strong>完整流程：</strong>自產品定位、問卷調研、導購頁設計到廣告投放，完整執行行銷計劃。</li>
+                    </ul>
+                    <ul class="lang-en hidden">
+                        <li><strong>Project Management:</strong> Lead Marketing PM responsible for overall strategy.</li>
+                        <li><strong>Full Process:</strong> Executed from positioning, surveys, and LP design to advertising.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
