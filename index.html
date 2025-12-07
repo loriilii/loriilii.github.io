@@ -1,188 +1,239 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lori Li | 李佳靜 - 專案管理 & 品牌行銷作品集</title>
-    <style>
-        /* 基礎樣式和字體設置 */
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, '微軟正黑體', 'Microsoft JhengHei', sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background-color: #f4f7f6;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        header {
-            background-color: #ffffff;
-            padding: 40px 0;
-            text-align: center;
-            border-bottom: 5px solid #2c3e50;
-        }
-        h1 {
-            color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 5px;
-        }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #bdc3c7;
-            padding-bottom: 10px;
-            margin-top: 30px;
-            font-size: 1.8em;
-        }
-        h3 {
-            color: #34495e;
-            font-size: 1.2em;
-            margin-top: 20px;
-            margin-bottom: 5px;
-        }
-        section {
-            background-color: #ffffff;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .contact-info a {
-            color: #2c3e50;
-            text-decoration: none;
-            margin-right: 20px;
-        }
-        .project-card {
-            border-left: 5px solid #3498db;
-            padding-left: 15px;
-            margin-bottom: 25px;
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 4px;
-        }
-        .tags {
-            display: block;
-            margin-top: 10px;
-            font-size: 0.9em;
-            color: #95a5a6;
-        }
-        .tag {
-            background-color: #bdc3c7;
-            color: #fff;
-            padding: 3px 8px;
-            border-radius: 3px;
-            margin-right: 5px;
-            display: inline-block;
-        }
-        .skills-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skills-list li {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #7f8c8d;
-            font-size: 0.8em;
-        }
-
-        /* 手機響應式調整 */
-        @media (max-width: 600px) {
-            .container {
-                margin: 20px auto;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-            .contact-info {
-                text-align: center;
-            }
-            .contact-info a {
-                display: block;
-                margin-bottom: 10px;
-                margin-right: 0;
-            }
-            .skills-list {
-                justify-content: center;
-            }
-        }
-    </style>
+    <title>Lori Li | Portfolio & Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-    <h1>李佳靜 Lori Li</h1>
-    <p>電子商務部主任 / 品牌行銷 / 專案管理</p>
-    <div class="contact-info">
-        <a href="mailto:tyshf458@gmail.com">tyshf458@gmail.com</a>
-        <span>|</span>
-        <a href="tel:0912754104">0912-754-104</a>
+    <!-- 導航列 -->
+    <nav class="navbar">
+        <div class="nav-brand">Lori Li</div>
+        <button id="lang-switch-btn" onclick="toggleLanguage()">Switch to English</button>
+    </nav>
+
+    <div class="container">
+        <!-- 表頭：個人資訊 -->
+        <header class="profile-header">
+            <div class="profile-img">
+                <img src="profile.jpg" alt="Lori Li">
+            </div>
+            <div class="profile-info">
+                <h1 class="lang-zh">李佳靜 (Lori Li)</h1>
+                <h1 class="lang-en hidden">Lori Li</h1>
+                
+                <h2 class="lang-zh">電子商務部主任 | 專案經理</h2>
+                <h2 class="lang-en hidden">Director of E-commerce | Project Manager</h2>
+                
+                <p class="company lang-zh">伊日生活・伊聖詩_台灣伊日股份有限公司</p>
+                <p class="company lang-en hidden">YIRI LIVING CO., LTD.</p>
+
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> tyshf458@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 0912-754-104</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <span class="lang-zh">新北市, 台灣</span><span class="lang-en hidden">New Taipei City, Taiwan</span></p>
+                </div>
+
+                <div class="summary">
+                    <p class="lang-zh">擁有 5-6 年電商實戰經驗，專精於電商營運、品牌行銷、產品定位與廣告策略。擅長數據驅動決策，具備從 0 到 1 籌劃集資專案、大型電商平台 (momo) 營運及跨部門協作能力。</p>
+                    <p class="lang-en hidden">5-6 years of experience in e-commerce operations, specializing in brand marketing, product positioning, and advertising strategy. Skilled in data-driven decision-making, crowdfunding project planning from 0 to 1, and operation management of major e-commerce platforms (momo).</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 履歷區塊 -->
+        <section id="resume">
+            <div class="section-title">
+                <h3 class="lang-zh">工作經歷</h3>
+                <h3 class="lang-en hidden">Work Experience</h3>
+            </div>
+            
+            <div class="resume-grid">
+                <!-- 經歷 1: 伊日生活 -->
+                <div class="resume-item full-width">
+                    <div class="job-header">
+                        <div>
+                            <h4 class="lang-zh">電子商務部主任</h4>
+                            <h4 class="lang-en hidden">Director of E-commerce Dept.</h4>
+                            <span class="company-name lang-zh">伊日生活・伊聖詩 (YIRI LIVING)</span>
+                            <span class="company-name lang-en hidden">YIRI LIVING CO., LTD.</span>
+                        </div>
+                        <span class="date">2023/07 - Present</span>
+                    </div>
+                    <ul class="lang-zh">
+                        <li><strong>momo 通路營運：</strong>接手一年內有 10 個月達成銷售目標，帶動通路業績 2025 上半年 YoY 成長 70% 以上。</li>
+                        <li><strong>庫存與促銷管理：</strong>深入分析數據，協調庫存並將倉租支出壓低 50%，降低熱門品缺貨率。</li>
+                        <li><strong>廣告策略優化：</strong>建構多渠道廣告規劃，運用行銷漏斗概念提升轉換率。</li>
+                        <li><strong>商品頁優化：</strong>重新梳理品牌溝通邏輯，依據通路特性調整呈現方式，提升用戶體驗。</li>
+                    </ul>
+                    <ul class="lang-en hidden">
+                        <li><strong>MOMO Channel Ops:</strong> Achieved sales targets for 10 months within the first year, driving over 70% YoY growth for H1 2025.</li>
+                        <li><strong>Inventory & Promo Management:</strong> Analyzed data to coordinate inventory, reducing warehouse costs by 50% and minimizing stockouts.</li>
+                        <li><strong>Ad Strategy Optimization:</strong> Built multi-channel ad plans using marketing funnel concepts to improve conversion rates.</li>
+                        <li><strong>Listing Optimization:</strong> Restructured brand communication logic to fit channel characteristics, enhancing user experience.</li>
+                    </ul>
+                </div>
+
+                <!-- 經歷 2: 麥菲爾 -->
+                <div class="resume-item">
+                    <div class="job-header">
+                        <div>
+                            <h4 class="lang-zh">品牌行銷企劃</h4>
+                            <h4 class="lang-en hidden">Brand Marketing Specialist</h4>
+                            <span class="company-name lang-zh">麥菲爾股份有限公司 (MYFEEL)</span>
+                            <span class="company-name lang-en hidden">MYFEEL</span>
+                        </div>
+                        <span class="date">2021/05 - 2023/04</span>
+                    </div>
+                    <ul class="lang-zh">
+                        <li><strong>集資專案管理：</strong>負責大風吹吹水機 ($74萬+)、Sharp 水潤機 ($54萬+) 等專案之規劃、廣告投放與成效追蹤。</li>
+                        <li><strong>數據導向廣告：</strong>管理 Google/FB Ads，執行 A/B 測試，平均 ROAS 維持在 5 以上。</li>
+                        <li><strong>流量驗證專案：</strong>主導跨部門測試專案，從假設建立到 Landing Page 規劃，驗證市場潛力。</li>
+                        <li><strong>實體活動規劃：</strong>籌辦跨國群眾集資論壇，參與人數 130+，建立 B2B 商機。</li>
+                    </ul>
+                    <ul class="lang-en hidden">
+                        <li><strong>Crowdfunding Management:</strong> Led projects like "Big Wind Blows" Dryer ($740k+) and Sharp Humidifier ($540k+), overseeing ads and tracking.</li>
+                        <li><strong>Data-Driven Ads:</strong> Managed Google/FB Ads with A/B testing, maintaining an average ROAS above 5.</li>
+                        <li><strong>Traffic Validation:</strong> Led cross-functional projects to validate market potential via landing page experiments.</li>
+                        <li><strong>Event Planning:</strong> Organized an international crowdfunding forum with 130+ attendees, expanding B2B opportunities.</li>
+                    </ul>
+                </div>
+
+                <!-- 經歷 3: 麥得恩 -->
+                <div class="resume-item">
+                    <div class="job-header">
+                        <div>
+                            <h4 class="lang-zh">行銷專員</h4>
+                            <h4 class="lang-en hidden">Marketing Specialist</h4>
+                            <span class="company-name lang-zh">麥得恩創意生活 (MIDEAN)</span>
+                            <span class="company-name lang-en hidden">MIDEAN Creative Life</span>
+                        </div>
+                        <span class="date">2019/09 - 2021/03</span>
+                    </div>
+                    <ul class="lang-zh">
+                        <li><strong>社群經營：</strong>從 0 建立 FB/IG，單篇貼文觸及破 3,000，粉絲數成長 38%。</li>
+                        <li><strong>電商營運：</strong>規劃促銷活動，檔期營收 YoY 成長 125%。</li>
+                        <li><strong>通路開發：</strong>洽談 Pinkoi、運動市集等平台合作，拓展銷售管道。</li>
+                    </ul>
+                    <ul class="lang-en hidden">
+                        <li><strong>Social Media:</strong> Built FB/IG from scratch; single post reach >3,000, fan base grew by 38%.</li>
+                        <li><strong>E-commerce Ops:</strong> Planned campaigns achieving 125% YoY revenue growth.</li>
+                        <li><strong>Channel Dev:</strong> Negotiated partnerships with platforms like Pinkoi to expand sales channels.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 技能與工具 -->
+            <div class="skills-section">
+                <h3 class="lang-zh">專業技能 & 證照</h3>
+                <h3 class="lang-en hidden">Skills & Certifications</h3>
+                <div class="skills-tags">
+                    <span>Google Analytics (GA4)</span>
+                    <span>Google Ads</span>
+                    <span>Facebook Ads</span>
+                    <span>SEO Strategy</span>
+                    <span class="lang-zh">電商營運</span><span class="lang-en hidden">E-commerce Ops</span>
+                    <span class="lang-zh">集資專案管理</span><span class="lang-en hidden">Crowdfunding</span>
+                    <span class="lang-zh">品牌行銷</span><span class="lang-en hidden">Brand Marketing</span>
+                    <span class="lang-zh">產品定位</span><span class="lang-en hidden">Product Positioning</span>
+                    <span class="lang-zh">多益 (TOEIC) 790</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 作品集區塊 -->
+        <section id="portfolio">
+            <div class="section-title">
+                <h3 class="lang-zh">精選專案作品</h3>
+                <h3 class="lang-en hidden">Selected Projects</h3>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- 作品 1: 大風吹寵物吹水機 -->
+                <div class="portfolio-card">
+                    <div class="card-tag lang-zh">集資專案</div>
+                    <div class="card-tag lang-en hidden">Crowdfunding</div>
+                    <div class="card-content">
+                        <h4 class="lang-zh">大風吹｜寵物沙龍吹水機</h4>
+                        <h4 class="lang-en hidden">"Big Wind Blows" Pet Dryer</h4>
+                        <p class="stats lang-zh"><i class="fas fa-chart-line"></i> 集資金額 $748,560</p>
+                        <p class="stats lang-en hidden"><i class="fas fa-chart-line"></i> Raised $748,560</p>
+                        <p class="description lang-zh">
+                            從前期問卷、產品定位(奴才友善)、到廣告投放與社群口碑操作。成功建構行銷流程，促成後續大宗採購機會。
+                        </p>
+                        <p class="description lang-en hidden">
+                            Managed the entire process from surveys and positioning (pet-owner friendly) to ads and social buzz. Successfully built a marketing funnel leading to bulk orders.
+                        </p>
+                        <a href="https://www.myfeel-tw.com/tw/crowdfunding/62ff424fad6732f67b44e823/uah-ucsj01/" target="_blank" class="btn">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- 作品 2: 悠懶律動機 -->
+                <div class="portfolio-card">
+                    <div class="card-tag lang-zh">產品重塑 / SEO</div>
+                    <div class="card-tag lang-en hidden">Rebranding / SEO</div>
+                    <div class="card-content">
+                        <h4 class="lang-zh">悠懶律動機 (Lazy Motion)</h4>
+                        <h4 class="lang-en hidden">Lazy Motion Machine</h4>
+                        <p class="stats lang-zh"><i class="fas fa-search"></i> 攻佔搜尋結果第一頁</p>
+                        <p class="stats lang-en hidden"><i class="fas fa-search"></i> Top Search Ranking</p>
+                        <p class="description lang-zh">
+                            結合「佛系運動」概念，降低居家運動門檻。透過 SEO 佈局與產品頁優化，成功搶佔關鍵字流量。
+                        </p>
+                        <p class="description lang-en hidden">
+                            Leveraged the "Lazy Exercise" concept to lower entry barriers. Captured keyword traffic through strategic SEO and landing page optimization.
+                        </p>
+                        <a href="https://www.myfeel-tw.com/tw/product/62569b02eb7ca436404dc1c8/em-active/" target="_blank" class="btn">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- 作品 3: TOSHIBA Pro-Air -->
+                <div class="portfolio-card">
+                    <div class="card-tag lang-zh">導購頁企劃</div>
+                    <div class="card-tag lang-en hidden">Landing Page Strategy</div>
+                    <div class="card-content">
+                        <h4 class="lang-zh">TOSHIBA Pro-Air 空氣清淨機</h4>
+                        <h4 class="lang-en hidden">TOSHIBA Pro-Air Purifier</h4>
+                        <p class="stats lang-zh"><i class="fas fa-bullseye"></i> 放大 CADR 產品優勢</p>
+                        <p class="stats lang-en hidden"><i class="fas fa-bullseye"></i> Highlighted CADR USP</p>
+                        <p class="description lang-zh">
+                            針對中小家庭與追求生活品質受眾，將複雜規格轉化為「8分鐘大空間淨化」的具體利益點，提升轉換說服力。
+                        </p>
+                        <p class="description lang-en hidden">
+                            Translated complex specs into concrete benefits ("8-min purification") for families, significantly enhancing conversion persuasion.
+                        </p>
+                        <a href="https://www.myfeel-tw.com/tw/product/6193693c2e6bad6469318b17/toshiba-pro-air/" target="_blank" class="btn">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- 作品 4: 集資專案 Washwow -->
+                <div class="portfolio-card">
+                    <div class="card-tag lang-zh">新品發布</div>
+                    <div class="card-tag lang-en hidden">Product Launch</div>
+                    <div class="card-content">
+                        <h4 class="lang-zh">Washwow 無限漱口水杯</h4>
+                        <h4 class="lang-en hidden">Washwow Mouthwash Cup</h4>
+                        <p class="stats lang-zh"><i class="fas fa-bolt"></i> 24小時突破 $100,000</p>
+                        <p class="stats lang-en hidden"><i class="fas fa-bolt"></i> $100k in 24 Hours</p>
+                        <p class="description lang-zh">
+                            負責完整行銷計劃，從問卷調研到導購頁設計。快速聚焦目標受眾，創造開局聲量。
+                        </p>
+                        <p class="description lang-en hidden">
+                            Managed full marketing plan from research to LP design. Rapidly focused on target audience and created initial launch buzz.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</header>
 
-<div class="container">
+    <footer>
+        <p>&copy; 2025 Lori Li. All Rights Reserved.</p>
+    </footer>
 
-    <section id="summary">
-        <h2>🧑‍💼 關於我 (Summary)</h2>
-        <p>擁有 **5~6年** 工作經歷，目前在職於伊日生活・伊聖詩，擔任電子商務部主任。主要擅長電商營運、品牌行銷產品定位與廣告策略。</p>
-        <p>具備從 **0到1** 籌劃專案（實體活動、集資新品上市）的經驗，能串聯內外部資源推動專案落地。熟悉數據分析，能挖掘市場機會並轉化為具體行銷與營運策略。</p>
-    </section>
-
-    <section id="experience">
-        <h2>🛠️ 專業技能 (Expertise)</h2>
-        <ul class="skills-list">
-            <li>電商通路營運 (momo)</li>
-            <li>專案規劃與跨部門協作</li>
-            <li>數據驅動決策 (GA)</li>
-            <li>整合行銷與成效優化</li>
-            <li>品牌行銷與產品定位</li>
-            <li>集資專案管理</li>
-            <li>廣告效益評估 (ROAS 5+)</li>
-            <li>社群媒體經營</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>📂 專案成就與作品集 (Projects & Portfolio)</h2>
-
-        <div class="project-card">
-            <h3>momo 電商通路營運突破</h3>
-            <p><strong>成效：</strong> 2025上半年平均銷售額 **YoY 成長 70%**；接手一年中 **10個月達成業績目標**。</p>
-            <p><strong>貢獻：</strong> 規劃行銷策略、優化商品上架與組合、掌握庫存水位，將倉租支出壓低 50%。</p>
-            <p><span class="tags"><span class="tag">電商營運</span><span class="tag">數據分析</span><span class="tag">庫存管理</span></span></p>
-        </div>
-
-        <div class="project-card">
-            <h3>集資專案 - 大風吹 寵物沙龍吹水機</h3>
-            <p><strong>集資金額：</strong> 達 **\$748,560**。</p>
-            <p><strong>貢獻：</strong> 擔任主要行銷 PM，完整建構從前期問卷、產品定位、導購頁製作到廣告投放的行銷流程。成功促成客戶於下線後獲得**大宗採購機會**。</p>
-            <p><span class="tags"><span class="tag">集資專案</span><span class="tag">產品定位</span><span class="tag">導購頁企劃</span></span></p>
-        </div>
-        
-        <div class="project-card">
-            <h3>實體活動 - 航向國際：開箱跨國群眾集資論壇</h3>
-            <p><strong>成效：</strong> **參與人數 130+**、80+間廠商到場，報到率 80%。</p>
-            <p><strong>貢獻：</strong> 擔任活動負責人，於 1.5 個月內完成論壇從 0-1 的規劃與執行，成功建立品牌專業形象並拓展 B2B 商機。</p>
-            <p><span class="tags"><span class="tag">活動規劃</span><span class="tag">B2B商機</span><span class="tag">媒體公關</span></span></p>
-        </div>
-
-        <div class="project-card">
-            <h3>其他集資專案 (PM & 行銷執行)</h3>
-            <ul>
-                <li><strong>Washwow無限漱口水杯：</strong> 上線 24小時突破 \$100,000。負責產品定位、導購頁設計與廣告投放。</li>
-                <li><strong>SHARP All Day水潤機：</strong> 集資金額達 \$544,
+    <script src="script.js"></script>
+</body>
+</html>
