@@ -1,18 +1,348 @@
-/* 修改圖片容器設定 */
+/* 全域變數與基本設定 */
+:root {
+    --primary-color: #5d7a8c;
+    --secondary-color: #d6cfc7;
+    --accent-color: #c0392b;
+    --bg-color: #f4f6f7;
+    --text-color: #333;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, 'Microsoft JhengHei', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.hidden { display: none !important; }
+
+/* 導航列 */
+.navbar {
+    background: #fff;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+#lang-switch-btn {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+#lang-switch-btn:hover { background-color: #4a6270; }
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* 個人資訊 Header */
+.profile-header {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 50px;
+}
+
+.profile-img img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--bg-color);
+}
+
+.profile-info h1 {
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+    font-size: 2.2rem;
+}
+
+.profile-info h2 {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0 0 15px 0;
+    font-weight: normal;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.contact-info i { color: var(--primary-color); margin-right: 5px; }
+
+.summary {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    color: #444;
+}
+
+/* 標題樣式 */
+.section-title h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title h3::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 30px;
+    background: var(--primary-color);
+    margin-right: 15px;
+    border-radius: 3px;
+}
+
+/* 履歷列表 */
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .resume-grid { grid-template-columns: 1fr 1fr; }
+    .resume-item.full-width { grid-column: 1 / -1; }
+}
+
+.resume-item {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.job-header h4 { margin: 0; color: #333; font-size: 1.1rem; }
+.job-header .company-name { display: block; font-size: 0.9rem; color: #777; margin-top: 4px; }
+.job-header .date { font-size: 0.85rem; color: #999; text-align: right; min-width: 100px;}
+
+.resume-item ul { padding-left: 20px; margin: 0; }
+.resume-item li { margin-bottom: 8px; font-size: 0.95rem; color: #555; }
+
+/* 技能標籤 */
+.skills-section { margin-top: 30px; }
+.skills-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.skills-tags span {
+    background: #eef2f5;
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* 作品集卡片 (更新) */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.portfolio-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    position: relative;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-card:hover { transform: translateY(-5px); }
+
+/* 新增圖片容器 */
 .portfolio-img-container {
     width: 100%;
-    /* 移除原本固定的 height: 180px */
-    height: auto; 
-    /* 新增：強制設定為 1:1 正方形比例，完美適配 1000x1000 圖片 */
-    aspect-ratio: 1 / 1; 
+    height: 180px;
     background-color: #eee;
     overflow: hidden;
-    border-bottom: 1px solid #eee;
 }
 
 .portfolio-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 確保圖片填滿容器 */
+    object-fit: cover; /* 確保圖片填滿且不變形 */
     transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-img-container img {
+    transform: scale(1.05);
+}
+
+.card-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.card-content { 
+    padding: 25px; 
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h4 { margin: 0 0 10px 0; color: #333; font-size: 1.2rem; }
+.card-content .stats { color: var(--accent-color); font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; }
+.card-content .description { font-size: 0.9rem; color: #666; margin-bottom: 20px; line-height: 1.5; flex-grow: 1; }
+
+/* 按鈕樣式 (更新) */
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+}
+
+.btn:hover { background: var(--primary-color); color: white; }
+
+/* 次要按鈕樣式 */
+.btn.secondary {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+    color: #555;
+}
+
+.btn.secondary:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* Modal (彈跳視窗) 樣式 - 新增 */
+.modal {
+    display: none; /* 預設隱藏 */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); /* 半透明黑色背景 */
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 距離頂部 5% */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.detail-section {
+    margin-bottom: 20px;
+}
+
+.detail-section h5 {
+    font-size: 1rem;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 8px;
+}
+
+.detail-section p, .detail-section li {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* 手機版適應 */
+@media (max-width: 768px) {
+    .profile-header { flex-direction: column; text-align: center; gap: 20px; }
+    .contact-info { justify-content: center; }
+    .modal-content { margin: 15% auto; width: 95%; padding: 20px; }
 }
