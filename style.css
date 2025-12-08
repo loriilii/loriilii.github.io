@@ -174,7 +174,7 @@ body {
     font-weight: 500;
 }
 
-/* 作品集卡片 (更新) */
+/* 作品集卡片 */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -195,18 +195,20 @@ body {
 
 .portfolio-card:hover { transform: translateY(-5px); }
 
-/* 新增圖片容器 */
+/* --- 圖片容器修正 (支援 1000x1000) --- */
 .portfolio-img-container {
     width: 100%;
-    height: 180px;
+    /* 設定長寬比為 1:1 (正方形) */
+    aspect-ratio: 1 / 1;
     background-color: #eee;
     overflow: hidden;
+    border-bottom: 1px solid #eee;
 }
 
 .portfolio-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 確保圖片填滿且不變形 */
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
@@ -238,7 +240,7 @@ body {
 .card-content .stats { color: var(--accent-color); font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; }
 .card-content .description { font-size: 0.9rem; color: #666; margin-bottom: 20px; line-height: 1.5; flex-grow: 1; }
 
-/* 按鈕樣式 (更新) */
+/* 按鈕群組 */
 .btn-group {
     display: flex;
     gap: 10px;
@@ -262,7 +264,6 @@ body {
 
 .btn:hover { background: var(--primary-color); color: white; }
 
-/* 次要按鈕樣式 */
 .btn.secondary {
     background-color: #f0f0f0;
     border-color: #ccc;
@@ -274,9 +275,9 @@ body {
     color: #333;
 }
 
-/* Modal (彈跳視窗) 樣式 - 新增 */
+/* Modal (彈跳視窗) 樣式 */
 .modal {
-    display: none; /* 預設隱藏 */
+    display: none;
     position: fixed; 
     z-index: 1000; 
     left: 0;
@@ -284,13 +285,13 @@ body {
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    background-color: rgba(0,0,0,0.6); /* 半透明黑色背景 */
+    background-color: rgba(0,0,0,0.6);
     backdrop-filter: blur(5px);
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto; /* 距離頂部 5% */
+    margin: 5% auto;
     padding: 30px;
     border: 1px solid #888;
     width: 90%;
@@ -309,11 +310,7 @@ body {
     line-height: 1;
 }
 
-.close-btn:hover,
-.close-btn:focus {
-    color: black;
-    text-decoration: none;
-}
+.close-btn:hover { color: black; }
 
 .modal h3 {
     margin-top: 0;
@@ -321,23 +318,39 @@ body {
     border-bottom: 1px solid #eee;
     padding-bottom: 15px;
     margin-bottom: 20px;
+    font-size: 1.5rem;
 }
 
 .detail-section {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
+/* PDF 內容樣式優化 */
 .detail-section h5 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--accent-color);
-    margin-bottom: 8px;
-    border-left: 3px solid var(--accent-color);
-    padding-left: 8px;
+    margin: 15px 0 10px 0;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 10px;
 }
 
-.detail-section p, .detail-section li {
+.detail-section p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.detail-section ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.detail-section li {
     font-size: 0.95rem;
     color: #555;
+    margin-bottom: 6px;
+    line-height: 1.6;
 }
 
 /* 手機版適應 */
@@ -345,4 +358,5 @@ body {
     .profile-header { flex-direction: column; text-align: center; gap: 20px; }
     .contact-info { justify-content: center; }
     .modal-content { margin: 15% auto; width: 95%; padding: 20px; }
+    .resume-grid { grid-template-columns: 1fr; }
 }
